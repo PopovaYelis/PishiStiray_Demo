@@ -1,0 +1,73 @@
+﻿<Page x:Class="PishiStiray_Demo.Pages.AddEditProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PishiStiray_Demo.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+       Title="Добавление товара" Loaded="Page_Loaded">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Артикль*"></TextBlock>
+                    <TextBox Name="TBoxArticle" MaxLength="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Название*"></TextBlock>
+                    <TextBox Name="TBoxTitle"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Описание*"></TextBlock>
+                    <TextBox Name="TBoxDescription" Height="100" TextWrapping="Wrap" VerticalScrollBarVisibility ="Auto"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Категория*"></TextBlock>
+                    <ComboBox Name="CBCategory"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Произв-тель*"></TextBlock>
+                    <ComboBox Name="CBManufactor"></ComboBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Поставщик*"></TextBlock>
+                    <ComboBox Name="CBProvider"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Цена*"></TextBlock>
+                    <TextBox Name="TBoxCost" MaxLength="19"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Действ. скидка*"></TextBlock>
+                    <TextBox Name="TBoxDiscountAm" MaxLength="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Max скидка*"></TextBlock>
+                    <TextBox Name ="TBoxDiscountMax" MaxLength="5"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Единицы измерения*"></TextBlock>
+                    <ComboBox Name="CBProdUni"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Кол-во на складе*"></TextBlock>
+                    <TextBox Name="TBoxInStock"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border Margin="5" Height="175" Width="200" BorderBrush="{StaticResource ColorAccent}" BorderThickness="1">
+                        <Image Name="ImageService">
+                        </Image>
+                    </Border>
+                    <Button Height="30" Width="200" Margin="5" Name="BtnSelectImage" Click="BtnSelectImage_Click" Content="Выбрать фотографию"></Button>
+                    <Button Height="30" Width="200" Margin="5" Name="BtnSave" Click="BtnSave_Click" Content="Coxpанить"></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

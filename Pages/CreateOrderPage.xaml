@@ -1,0 +1,63 @@
+﻿<Page x:Class="PishiStiray_Demo.Pages.CreateOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PishiStiray_Demo.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Оформление заказа">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="ФИО:"/>
+                    <TextBlock Style="{StaticResource BlockOrder}" Name="TBlockName" Width="auto"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Состав заказа:"></TextBlock>
+                    <ListBox Name="LBItems"></ListBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Дата оформления:"></TextBlock>
+                    <TextBlock Name="TBlockDateOrder" Style="{StaticResource BlockOrder}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Дата доставки:"></TextBlock>
+                    <TextBlock Name="TBlockDateDelivery" Style="{StaticResource BlockOrder}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Номер заказа:"></TextBlock>
+                    <TextBlock Name="TBlockOrderNum" Style="{StaticResource BlockOrder}"></TextBlock>
+                </StackPanel>
+                
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Пункт выдачи:"></TextBlock>
+                    <ComboBox Name="CBPickup"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Код получения:"></TextBlock>
+                    <TextBlock Name="TBlockCode" Style="{StaticResource BlockOrder}" FontSize="18"
+                               FontWeight="Bold"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Сумма заказа:"></TextBlock>
+                    <TextBlock Name="TBlockAllCost" Style="{StaticResource BlockOrder}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Сумма скидки:"></TextBlock>
+                    <TextBlock Name="TBlockAllDisc" Style="{StaticResource BlockOrder}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockOrder}" Text="Итого:"></TextBlock>
+                    <TextBlock Name="TBlockFinPrice" Style="{StaticResource BlockOrder}"></TextBlock>
+                </StackPanel>
+                <Button Content="Оформить заказ" Name="BtnCrtOrd" Click="BtnCrtOrd_Click"/>
+                <Button Content="Сохранить в PDF" Name="BtnSaveToFile" Click="BtnSaveToFile_Click" Visibility="Collapsed"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
